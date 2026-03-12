@@ -104,6 +104,20 @@ The Orchestrator explicitly calibrates confidence scores based on the council co
 
 ---
 
+## 🏁 Orchestrator Role & Conclusion
+
+<div align="center" style="background-color: #F2F2F2; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <h3 style="color: #1C7293; margin-top: 0;">Zero Tiebreaks Required</h3>
+  <p style="color: #333333; text-align: left; margin-bottom: 0;">Because the Council reached unanimous or majority agreement on all 100 questions by Phase 3, the Orchestrator was never forced to break a split decision. Its primary role successfully became synthesizing the arguments and calibrating final confidence.</p>
+</div>
+
+### Final Takeaways
+*   **Debate improves reasoning:** The architecture successfully moved performance from a 70% baseline to an 86% final accuracy on identical questions.
+*   **Convergence over time:** Agents actively update their priors based on cross-examination. This is proven by the growth in unanimous agreement from 75 questions in Phase 1 to 93 questions in Phase 3.
+*   **Early indicators of success:** Even the most difficult questions were largely solved in the first independent phase (81% majority accuracy on the 21 'Improved' questions), showing that strict epistemic framing alone forces better logic before debate even begins.
+
+---
+
 ## 📂 Repository Contents
 
 *   `run_mmlu_eval.py`: Standard baseline evaluation script.
