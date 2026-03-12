@@ -106,7 +106,7 @@ The Orchestrator explicitly calibrates confidence scores based on the council co
 
 ## 🏁 Orchestrator Role & Conclusion
 
-<div align="center" style="background-color: #F2F2F2; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+<div align="left" style="background-color: #F2F2F2; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
   <h3 style="color: #1C7293; margin-top: 0;">Zero Tiebreaks Required</h3>
   <p style="color: #333333; text-align: left; margin-bottom: 0;">Because the Council reached unanimous or majority agreement on all 100 questions by Phase 3, the Orchestrator was never forced to break a split decision. Its primary role successfully became synthesizing the arguments and calibrating final confidence.</p>
 </div>
