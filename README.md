@@ -7,20 +7,66 @@
 
 ## 🔬 Experiment Setup
 
-The Epistemic Council architecture utilizes five distinct agents, each explicitly prompted to operate under a specific philosophical framework, alongside an Orchestrator agent to synthesize debate and calibrate final confidence.
+The evaluation utilizes a council of 5 distinct epistemic agents, each explicitly prompted to operate under a different philosophical framework, alongside an Orchestrator agent.
 
-*   **Rationalist:** Focuses on logical necessity, formal syllogisms, and deduction. 
-*   **Empiricist:** Builds knowledge strictly through measurement, observation, and falsifiability checks.
-*   **Coherentist:** Evaluates truth based on systemic dependencies and holistic fit within a "Web of Belief."
-*   **Pragmatist:** Measures truth by practical outcomes, utility delta, and "what works."
-*   **Standpoint:** Challenges universal claims by tracing epistemic genealogy and analyzing power dynamics.
+```mermaid
+graph LR
+    O[<b>Orchestrator</b><br/><i>Synthesizes debate & calibrates confidence</i>]
+    
+    R[<b>Rationalist</b><br/>Logical necessity & deduction]
+    E[<b>Empiricist</b><br/>Measurement & falsifiability]
+    C[<b>Coherentist</b><br/>Systemic dependencies & holistic fit]
+    P[<b>Pragmatist</b><br/>Practical outcomes & utility delta]
+    S[<b>Standpoint</b><br/>Epistemic genealogy & power dynamics]
+    
+    R --- O
+    E --- O
+    C --- O
+    P --- O
+    S --- O
+    
+    style O fill:#21295C,stroke:#065A82,stroke-width:2px,color:#fff
+    style R fill:#1C7293,stroke:#065A82,stroke-width:2px,color:#fff
+    style E fill:#1C7293,stroke:#065A82,stroke-width:2px,color:#fff
+    style C fill:#1C7293,stroke:#065A82,stroke-width:2px,color:#fff
+    style P fill:#1C7293,stroke:#065A82,stroke-width:2px,color:#fff
+    style S fill:#1C7293,stroke:#065A82,stroke-width:2px,color:#fff
+```
 
 ### 🔄 The 4-Phase Debate Process
 
-1.  **Independent Opening (Phase 1):** All 5 agents evaluate the question and provide an initial answer in parallel, with no cross-talk.
-2.  **Critique Round 1 (Phase 2):** Agents review the Phase 1 transcript, actively critiquing the logic and evidence of their peers while defending their own epistemic position.
-3.  **Critique Round 2 (Phase 3):** Agents review the accumulated debate transcript and submit their final, revised verdict and confidence score.
-4.  **Consensus Resolution (Phase 4):** A majority vote is taken based on Phase 3 answers. If the council is split without a majority, the Orchestrator steps in to mediate and break the tie based on the strength of the preceding arguments.
+The council systematically breaks down complex problems by iteratively critiquing and revising positions before reaching a consensus.
+
+```mermaid
+sequenceDiagram
+    participant Q as Input Question
+    participant A as 5 Epistemic Agents
+    participant O as Orchestrator
+    
+    rect rgb(240, 248, 255)
+    Note over Q,O: Phase 1: Independent Opening
+    Q->>A: Distribute Question
+    Note right of A: Agents reason in parallel (blind).<br/>Each uses their strict epistemic framework.
+    end
+    
+    rect rgb(245, 255, 250)
+    Note over Q,O: Phase 2: Critique Round 1
+    A->>A: Review Phase 1 Transcripts
+    Note right of A: Agents cross-examine peers,<br/>identifying logical flaws and defending<br/>their own epistemology.
+    end
+    
+    rect rgb(255, 250, 240)
+    Note over Q,O: Phase 3: Critique Round 2
+    A->>A: Review Phase 1+2 Transcripts
+    Note right of A: Having considered all arguments,<br/>agents provide their final revised<br/>verdict and confidence score.
+    end
+    
+    rect rgb(255, 240, 245)
+    Note over Q,O: Phase 4: Consensus Resolution
+    A->>O: Final Votes & Full Debate Log
+    Note right of O: Majority Vote is taken.<br/>If split (e.g., 2-2-1), the Orchestrator<br/>mediates and tiebreaks based on<br/>the strongest arguments.
+    end
+```
 
 ---
 
@@ -41,8 +87,8 @@ The Epistemic Council architecture demonstrated a significant improvement over t
 
 **Outcome Breakdown:**
 *   **Both Correct:** 65 questions
-*   **Council Improved:** 21 questions (Baseline was wrong, Council got it right)
-*   **Council Regressed:** 5 questions (Baseline was right, Council got it wrong)
+*   **Council Improved:** 21 questions *(Baseline was wrong, Council got it right)*
+*   **Council Regressed:** 5 questions *(Baseline was right, Council got it wrong)*
 *   **Both Incorrect:** 9 questions
 
 ---
