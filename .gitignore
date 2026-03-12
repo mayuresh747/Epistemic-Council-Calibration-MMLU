@@ -1,0 +1,5 @@
+.env
+.DS_Store
+*.pptx
+*.docx
+phase_results.txt
