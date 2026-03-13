@@ -71,6 +71,13 @@ The council naturally converges toward unanimity. By Phase 3, there were zero sp
 
 While accuracy peaks slightly in Phase 2 (88%), Phase 3 normalizes at 86% as agents lock in their final positions. Average confidence stays steadily high (>94%).
 
+### 4. Individual Epistemic Model Accuracy
+<div align="center">
+  <img src="baseline_vs_epistemic_accuracy.png" width="80%" alt="Baseline vs Individual Epistemic Model Accuracy">
+</div>
+
+Comparing individual models against the baseline highlights how different epistemological frameworks perform across the phases.
+
 ---
 
 ## 🔎 Deep Dive: 'Council Improved' Cases
